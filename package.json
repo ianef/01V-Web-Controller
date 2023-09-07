@@ -22,14 +22,14 @@
     "author": "Carter Roeser <carter@cdgtech.one>",
     "license": "MIT",
     "dependencies": {
+        "electron": "^9.0.5",
         "express": "^4.17.1",
         "ip": "^1.1.5",
         "jquery": "^3.5.1",
         "jzz": "^1.0.8",
         "shelljs": "^0.8.4",
         "socket.io": "^2.3.0",
-        "web-midi-api": "^2.0.8",
-        "electron": "^9.0.5"
+        "web-midi-api": "^2.0.8"
     },
     "bin": {
         "01VWebController": "./global.js"
