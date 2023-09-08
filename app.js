@@ -3,11 +3,35 @@ var app = express();
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var JZZ = require("jzz");
+var fs = require("fs");
+var labelFile = 'channel-labels.json';
+var channelLabels = [];
+
+// Load the channel labels
+if (fs.existsSync(labelFile)) {
+    channelLabels = JSON.parse(fs,fs.readFile(labelFile));
+}
+
+app.use(express.json());
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
-var outPort;
+
+app.get("/label-list", (req, res) => {
+    res.send(JSON.stringify(channelLabels));
+});
+
+app.post("/labels-list", (req, res) => {
+    try {
+        channelLabels = req.body;
+        fs.writeFileSync(labelFile, JSON.stringify(channelLabels));
+        res.send('');
+    } catch(e) {
+        res.status(400).send(e.message);
+    }
+});
+
 app.use("/assets", express.static(__dirname + '/assets'));
 
 function connectOutport(input, output, port) {

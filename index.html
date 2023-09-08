@@ -28,14 +28,17 @@
             <a class="dropdown-item" href="#" onclick="openPage('bank7', this)">AUX-3 1 - 8</a>
             <a class="dropdown-item" href="#" onclick="openPage('pan', this)">Pan</a>
             <a class="dropdown-item" href="#" onclick="openPage('bank8', this)">Output Busses</a>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#" title="Full screen" onclick="if(document.fullscreen) {document.exitFullscreen();} else {document.body.requestFullscreen();}">
                 <i class="fa fa-arrows-alt"></i>
             </a>
-            <a class="dropdown-item" href="#" title="Refresh" onclick="location.reload();"><i class="fa fa-refresh"></i></a>
+            <a class="dropdown-item mt-1" href="#" title="Refresh" onclick="location.reload();"><i class="fa fa-refresh"></i></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" onclick="openPage('labels', this)" id="labelMenu">Channel Labels</a>
         </div>
         <h3 id="page-title" class="ml-3 pt2 d-inline-block">Page title</h3>
     </div>
-    <div style="background-color: #555;width:100%;height: 44.5px;"></div>
+    <div style="width:100%;height: 10px;"></div>
 
     <div id="bank1" class="tabcontent container-fluid" style="overflow: hidden; overflow-y: hidden;">
         <div class="row" style="position: relative; top: 20%;">
@@ -65,42 +68,42 @@
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="64" onclick="toggleMute('64')">
+                <button type="button" class="btn btn-success" id="64" onclick="toggleMute('64')" data-channel="1">
           Ch 1
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="65" onclick="toggleMute('65')">
+                <button type="button" class="btn btn-success" id="65" onclick="toggleMute('65')" data-channel="2">
           Ch 2
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="66" onclick="toggleMute('66')">
+                <button type="button" class="btn btn-success" id="66" onclick="toggleMute('66')"  data-channel="3">
           Ch 3
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="67" onclick="toggleMute('67')">
+                <button type="button" class="btn btn-success" id="67" onclick="toggleMute('67')" data-channel="4">
           Ch 4
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="68" onclick="toggleMute('68')">
+                <button type="button" class="btn btn-success" id="68" onclick="toggleMute('68')" data-channel="5">
           Ch 5
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="69" onclick="toggleMute('69')">
+                <button type="button" class="btn btn-success" id="69" onclick="toggleMute('69')" data-channel="6">
           Ch 6
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="70" onclick="toggleMute('70')">
+                <button type="button" class="btn btn-success" id="70" onclick="toggleMute('70')" data-channel="7">
           Ch 7
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="71" onclick="toggleMute('71')">
+                <button type="button" class="btn btn-success" id="71" onclick="toggleMute('71')" data-channel="8">
           Ch 8
         </button>
             </div>
@@ -129,32 +132,32 @@
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="72" onclick="toggleMute('72')">
+                <button type="button" class="btn btn-success" id="72" onclick="toggleMute('72')" data-channel="9">
           Ch 9
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="73" onclick="toggleMute('73')">
+                <button type="button" class="btn btn-success" id="73" onclick="toggleMute('73')" data-channel="10">
           Ch 10
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="74" onclick="toggleMute('74')">
+                <button type="button" class="btn btn-success" id="74" onclick="toggleMute('74')" data-channel="11">
           Ch 11
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="75" onclick="toggleMute('75')">
+                <button type="button" class="btn btn-success" id="75" onclick="toggleMute('75')" data-channel="12">
           Ch 12
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="88" onclick="toggleMute('88')">
+                <button type="button" class="btn btn-success" id="88" onclick="toggleMute('88')" data-channel="13">
           Ch 13/14
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="14" onclick="toggleMute('14')">
+                <button type="button" class="btn btn-success" id="14" onclick="toggleMute('14')" data-channel="14">
           Ch 15/16
         </button>
             </div>
@@ -189,28 +192,28 @@
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 1</button>
+                <button type="button" class="btn btn-info" disabled data-channel="1">Ch 1</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 2</button>
+                <button type="button" class="btn btn-info" disabled data-channel="2">Ch 2</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 3</button>
+                <button type="button" class="btn btn-info" disabled data-channel="3">Ch 3</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 4</button>
+                <button type="button" class="btn btn-info" disabled data-channel="4">Ch 4</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 5</button>
+                <button type="button" class="btn btn-info" disabled data-channel="5">Ch 5</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 6</button>
+                <button type="button" class="btn btn-info" disabled data-channel="6">Ch 6</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 7</button>
+                <button type="button" class="btn btn-info" disabled data-channel="7">Ch 7</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 8</button>
+                <button type="button" class="btn btn-info" disabled data-channel="8">Ch 8</button>
             </div>
         </div>
     </div>
@@ -237,22 +240,22 @@
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 9</button>
+                <button type="button" class="btn btn-info" disabled data-channel="9">Ch 9</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 10</button>
+                <button type="button" class="btn btn-info" disabled data-channel="10">Ch 10</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 11</button>
+                <button type="button" class="btn btn-info" disabled data-channel="11">Ch 11</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 12</button>
+                <button type="button" class="btn btn-info" disabled data-channel="12">Ch 12</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 13/14</button>
+                <button type="button" class="btn btn-info" disabled data-channel="13">Ch 13/14</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 15/16</button>
+                <button type="button" class="btn btn-info" disabled data-channel="14">Ch 15/16</button>
             </div>
         </div>
     </div>
@@ -285,28 +288,28 @@
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 1</button>
+                <button type="button" class="btn btn-info" disabled data-channel="1">Ch 1</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 2</button>
+                <button type="button" class="btn btn-info" disabled data-channel="2">Ch 2</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 3</button>
+                <button type="button" class="btn btn-info" disabled data-channel="3">Ch 3</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 4</button>
+                <button type="button" class="btn btn-info" disabled data-channel="4">Ch 4</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 5</button>
+                <button type="button" class="btn btn-info" disabled data-channel="5">Ch 5</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 6</button>
+                <button type="button" class="btn btn-info" disabled data-channel="6">Ch 6</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 7</button>
+                <button type="button" class="btn btn-info" disabled data-channel="7">Ch 7</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 8</button>
+                <button type="button" class="btn btn-info" disabled data-channel="8">Ch 8</button>
             </div>
         </div>
     </div>
@@ -333,22 +336,22 @@
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 9</button>
+                <button type="button" class="btn btn-info" disabled data-channel="9">Ch 9</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 10</button>
+                <button type="button" class="btn btn-info" disabled data-channel="10">Ch 10</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 11</button>
+                <button type="button" class="btn btn-info" disabled data-channel="11">Ch 11</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 12</button>
+                <button type="button" class="btn btn-info" disabled data-channel="12">Ch 12</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 13/14</button>
+                <button type="button" class="btn btn-info" disabled data-channel="13">Ch 13/14</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 15/16</button>
+                <button type="button" class="btn btn-info" disabled data-channel="14">Ch 15/16</button>
             </div>
         </div>
     </div>
@@ -381,28 +384,28 @@
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 1</button>
+                <button type="button" class="btn btn-info" disabled data-channel="1">Ch 1</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 2</button>
+                <button type="button" class="btn btn-info" disabled data-channel="2">Ch 2</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 3</button>
+                <button type="button" class="btn btn-info" disabled data-channel="3">Ch 3</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 4</button>
+                <button type="button" class="btn btn-info" disabled data-channel="4">Ch 4</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 5</button>
+                <button type="button" class="btn btn-info" disabled data-channel="5">Ch 5</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 6</button>
+                <button type="button" class="btn btn-info" disabled data-channel="6">Ch 6</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 7</button>
+                <button type="button" class="btn btn-info" disabled data-channel="7">Ch 7</button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-info" disabled>Ch 8</button>
+                <button type="button" class="btn btn-info" disabled data-channel="8">Ch 8</button>
             </div>
         </div>
     </div>
@@ -524,40 +527,40 @@
             </div>
             <div class="w-100"></div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('38').setValue(64, true);">
-                <p>Ch 1</p>
+                <p data-channel="1">Ch 1</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('39').setValue(64, true);">
-                <p>Ch 2</p>
+                <p data-channel="2">Ch 2</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('40').setValue(64, true);">
-                <p>Ch 3</p>
+                <p data-channel="3">Ch 3</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('41').setValue(64, true);">
-                <p>Ch 4</p>
+                <p data-channel="4">Ch 4</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('42').setValue(64, true);">
-                <p>Ch 5</p>
+                <p data-channel="5">Ch 5</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('43').setValue(64, true);">
-                <p>Ch 6</p>
+                <p data-channel="6">Ch 6</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('44').setValue(64, true);">
-                <p>Ch 7</p>
+                <p data-channel="7">Ch 7</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('45').setValue(64, true);">
-                <p>Ch 8</p>
+                <p data-channel="8">Ch 8</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('46').setValue(64, true);">
-                <p>Ch 9</p>
+                <p data-channel="9">Ch 9</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('47').setValue(64, true);">
-                <p>Ch 10</p>
+                <p data-channel="10">Ch 10</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('48').setValue(64, true);">
-                <p>Ch 11</p>
+                <p data-channel="11">Ch 11</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('49').setValue(64, true);">
-                <p>Ch 12</p>
+                <p data-channel="12">Ch 12</p>
             </div>
             <div class="w-100"></div>
             <div class="col-1" style="top: -5%;">
@@ -572,86 +575,260 @@
             <div class="col-1" style="top: -5%;">
                 <webaudio-knob id="16" class="panpot" value="127" min="0" max="127" step="3"></webaudio-knob>
             </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="54" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="55" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="56" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="57" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="58" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="59" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="60" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
-            <div class="col-1" style="top: -5%;">
-                <webaudio-knob id="61" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
-            </div>
             <div class="w-100"></div>
             <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('62').setValue(0, true);">
-                <p>Ch 13</p>
+                <p data-channel="13">Ch 13</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('63').setValue(127, true);">
-                <p>Ch 14</p>
+                <p data-channel="13">Ch 14</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('15').setValue(0, true);">
-                <p>Ch 15</p>
+                <p data-channel="14">Ch 15</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('16').setValue(127, true);">
-                <p>Ch 16</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('54').setValue(64, true);">
-                <p>Ch 17</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('55').setValue(64, true);">
-                <p>Ch 18</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('56').setValue(64, true);">
-                <p>Ch 19</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('57').setValue(64, true);">
-                <p>Ch 20</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('58').setValue(64, true);">
-                <p>Ch 21</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('59').setValue(64, true);">
-                <p>Ch 22</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('60').setValue(64, true);">
-                <p>Ch 23</p>
-            </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -12%;" onclick="document.getElementById('61').setValue(64, true);">
-                <p>Ch 24</p>
+                <p data-channel="14">Ch 16</p>
             </div>
         </div>
     </div>
+
+    <div id="labels" class="tabcontent container-fluid" style="overflow: hidden; overflow-y: hidden;">
+        <div class="row" style="position: relative; top: 8%;">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-sm">
+                        <h3>Channel Labels</h3>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm">
+                        <ul id="label-sets"></ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm">
+                        <button type="button" class="btn btn-success" onclick="onAddLabelSet()"><i class="fa fa-plus-circle mr-3"></i>Add Label Set</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+
+    <div id="label-edit" class="tabcontent container-fluid" style="overflow: hidden; overflow-y: hidden;">
+        <form id="labels-edit-form" onsubmit="saveLabelSet(event)">
+            <div class="row" style="position: relative; top: 8%;">
+                <div class="col-sm">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h3>Channel Labels</h3>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Set Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="name" class="form-control-sm" id="label-set-title" placeholder="Set Name" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2" id="labels-1-3">
+                    </div>
+                    <div class="row mt-2" id="labels-4-6">
+                    </div>
+                    <div class="row mt-2" id="labels-7-9">
+                    </div>
+                    <div class="row mt-2" id="labels-10-12">
+                    </div>
+                    <div class="row mt-2" id="labels-13-16">
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o mr-3"></i>Save Label Set</button>
+                            <button type="button" class="btn btn-primary ml-3" onclick="useLabelSet()"><i class="fa fa-check-circle mr-3"></i>Use This Label Set</button>
+                            <button type="button" class="btn btn-danger ml-3" onclick="deleteLabelSet()"><i class="fa fa-cross-circle mr-3"></i>Delete This Label Set</button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="id" id="label-set-id">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <template id="label-list-item-template">
+        <a href="#"><li data-value=""></li></a>
+    </template>
+
+    <template id="channel-name-template">
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="">Channel Name</label>
+                <input type="text" name="label-X" class="form-control-sm" id="" placeholder="Example" required>
+            </div>
+        </div>
+    </template>
+
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/webaudio-controls.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+
     <script>
-        function openPage(pageName, elmnt, color) {
+        var channelLabels = [];
+
+        function displayLabels() {
+            const template = document.getElementById('label-list-item-template');
+            const list = document.getElementById('label-sets');
+            list.textContent = '';
+            channelLabels.forEach((l) => {
+                const clone = template.content.cloneNode(true);
+                const item = clone.querySelector('li');
+                item.dataset.value = l.id;
+                item.textContent = l.name;
+                item.addEventListener('click', editLabelSet);
+                list.appendChild(clone);
+            });
+        }
+
+        function onAddLabelSet() {
+            channelLabels.push({
+                id: channelLabels.length + 1,
+                name: 'New Channel Set',
+                labels: ['Ch 1','Ch 2','Ch 3', 'Ch 4','Ch 5','Ch 6','Ch 7','Ch 8','Ch 9','Ch 10','Ch 11','Ch 12','Ch 13-14','Ch 15-16']
+            });
+            displayLabels();
+        }
+
+        function editLabelSet(event) {
+            const item = event.currentTarget;
+            const channelId = item.dataset.value;
+
+            const template = document.getElementById('channel-name-template');
+            const titleInput = document.getElementById('label-set-title');
+            const idInput = document.getElementById('label-set-id');
+            const group1 = document.getElementById('labels-1-3');
+            const group2 = document.getElementById('labels-4-6');
+            const group3 = document.getElementById('labels-7-9');
+            const group4 = document.getElementById('labels-10-12');
+            const group5 = document.getElementById('labels-13-16');
+
+            const labelSet = channelLabels.find((l) => l.id == channelId);
+
+            titleInput.value = labelSet.name;
+            idInput.value = labelSet.id;
+
+            labelSet.labels.forEach((label, i) => {
+                const clone = template.content.cloneNode(true);
+                const labelElem = clone.querySelector('label');
+                const inputElem = clone.querySelector('input');
+                const labelText = (i < 12 ? `Channel ${i + 1}` : ( i === 12 ? 'Channels 13-14' : 'Channels 15-16'));
+                const id = `channel-edit-${i}`;
+                labelElem.textContent = labelText;
+                labelElem.attributes['for'].value = id;
+                inputElem.attributes['id'].value = id;
+                inputElem.attributes['name'].value = `label-${i}`;
+                inputElem.attributes['placeholder'].value = labelText;
+                inputElem.value = label;
+                switch (true) {
+                    case i <= 2:
+                        group1.appendChild(clone);
+                        break;
+                    case i <= 5:
+                        group2.appendChild(clone);
+                        break;
+                    case i <= 8:
+                        group3.appendChild(clone);
+                        break;
+                    case i <= 11:
+                        group4.appendChild(clone);
+                        break;
+                    default:
+                        group5.appendChild(clone);
+                        break;
+                }
+            });
+
+            const titleElem = document.createElement('span');
+            titleElem.textContent = 'Channel Labels';
+            openPage('label-edit', titleElem);
+            titleElem.remove();
+        }
+
+        function saveLabelSet(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('labels-edit-form');
+            const formData = new FormData(form);
+            const channelId = formData.get('id');
+            const labelSet = channelLabels.find((l) => l.id == channelId);
+            labelSet.name = formData.get('name');
+            for (i = 0; i < 14; i++) {
+                labelSet.labels[i] = formData.get(`label-${i}`);
+            }
+
+            fetch('/labels-list', {
+                method: 'POST',
+                body: JSON.stringify(channelLabels),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        document.getElementById("labelMenu").click();
+                    } else {
+                        alert(response.statusText);
+                    }
+                });
+        }
+
+        function useLabelSet() {
+            const idInput = document.getElementById('label-set-id');
+            const labelSet = channelLabels.find((l) => l.id == idInput.value);
+            if (labelSet) {
+                labelSet.labels.forEach((l, i) => {
+                    const channelLabels = document.querySelectorAll(`[data-channel="${i + 1}"]`);
+                    channelLabels.forEach((n) => n.textContent = l);
+                    document.getElementById("defaultOpen").click();
+                });
+            }
+        }
+
+        function deleteLabelSet() {
+            const idInput = document.getElementById('label-set-id');
+            const setIndex = channelLabels.findIndex((l) => l.id == idInput.value);
+            if (setIndex !== -1) {
+                channelLabels.splice(setIndex, 1);
+                displayLabels();
+            }
+        }
+
+        fetch('/label-list')
+            .then((response) => {
+                if (response.ok) {
+                     response.json()
+                        .then((json) => {
+                            channelLabels = json;
+                            displayLabels();
+                        });
+                } else {
+                    alert(response.statusText);
+                }
+            });
+
+        function openPage(pageName, elmnt,) {
             var i, tabcontent, tablinks;
             titleElement = document.getElementById('page-title');
-            console.log(titleElement);
             titleElement.textContent = elmnt.textContent;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-            document.getElementById(pageName).style.display = "flex";
-            elmnt.style.backgroundColor = color;
+            const display = (pageName.substring(0, 5) === 'label' ? 'block' : 'flex');
+            document.getElementById(pageName).style.display = display;
         }
 
         document.getElementById("defaultOpen").click();
