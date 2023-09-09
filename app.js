@@ -9,7 +9,7 @@ var channelLabels = [];
 
 // Load the channel labels
 if (fs.existsSync(labelFile)) {
-    channelLabels = JSON.parse(fs,fs.readFile(labelFile));
+    channelLabels = JSON.parse(fs.readFileSync(labelFile));
 }
 
 app.use(express.json());
